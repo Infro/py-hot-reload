@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "py-hot-reload"
-version = "1.0.1"
+version = "1.0.2"
 description = "Python Hot Reload starts the given program and reloads it whenever any file changes in the current directory or imported modules."
 readme = "README.md"
 authors = [{ name = "Heppa Soft", email = "heppasoft@gmail.com" }]
@@ -37,3 +37,17 @@ requires-python = ">=3.6"
 
 [project.scripts]
 py-hot-reload = "py_hot_reload.__main__:main"
+
+[tool.bumpver]
+current_version = "1.0.2"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message  = "{new_version}"
+commit          = true
+tag             = true
+push            = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
+"src/py_hot_reload/__init__.py" = ['__version__ = "{version}"']
+"src/py_hot_reload/__main__.py" = ['__version__ = "{version}"']
+

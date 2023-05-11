@@ -14,7 +14,7 @@ Python Hot Reload is supported on Python 3.6 and above.
 Python Hot Reload has a command line implementation called `py-hot-reload`. To see help message, call the program with `-h, --help`:
 
     $ py-hot-reload -h
-    Usage: python -m hot_reload [OPTIONS] PYTHON_FILE
+    Usage: py-hot-reload [OPTIONS] PYTHON_FILE
 
     Options:
     -V, --version                   Show the version and exit.
