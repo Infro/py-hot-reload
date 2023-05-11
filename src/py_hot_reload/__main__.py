@@ -7,7 +7,7 @@ import subprocess
 __author__ = "Heppa Soft"
 __copyright__ = "Copyright (C) 2023 Heppa Soft"
 __license__ = "MIT License"
-__version__ = "1.0.4"
+__version__ = "1.0.5"
 
 
 def print_version(ctx, param, value):
@@ -60,6 +60,10 @@ def hot_reload(ctx, python_file, verbose, extra_patterns, ignore_patterns, inter
     executable = "python"
     if venv != None:
         executable = f"{venv}/bin/python" if os.name == "posix" else f"{venv}/Scripts/python.exe"
+    
+    p = run_shell_command([executable, "-c", "import py_hot_reload"])
+    if p[1].decode() != "" and "ModuleNotFoundError: No module named 'py_hot_reload'" in p[0].decode():
+        p = run_shell_command([executable, "-m", "pip", "install", "py_hot_reload"])
     
     exit_code = subprocess.call([executable,"-c",f"import py_hot_reload;py_hot_reload.file_run_with_reloader('{python_file}', {args}, {extra_patterns}, {ignore_patterns}, {interval}, {verbose}, {add_current_folder_to_patterns}, {ignore_venv_and_python_lib})"], env=os.environ.copy(), close_fds=False)
     
