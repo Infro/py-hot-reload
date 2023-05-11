@@ -7,7 +7,7 @@ import subprocess
 __author__ = "Heppa Soft"
 __copyright__ = "Copyright (C) 2023 Heppa Soft"
 __license__ = "MIT License"
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 
 
 def print_version(ctx, param, value):
