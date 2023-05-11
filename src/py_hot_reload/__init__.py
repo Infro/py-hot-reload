@@ -20,7 +20,7 @@ __all__ = ["run_with_reloader", "file_run_with_reloader"]
 __author__ = "Heppa Soft"
 __copyright__ = "Copyright (C) 2023 Heppa Soft"
 __license__ = "MIT License"
-__version__ = "1.0.5"
+__version__ = "1.0.6"
 
 _ignore_always = tuple({sys.base_prefix, sys.base_exec_prefix})
 
