@@ -32,8 +32,8 @@ dependencies = [
 requires-python = ">=3.6"
 
 [project.urls]
-"Homepage" = "https://github.com/heppasoft/hot-reload"
-"Bug Tracker" = "https://github.com/heppasoft/hot-reload/issues"
+"Homepage" = "https://github.com/heppasoft/py-hot-reload"
+"Bug Tracker" = "https://github.com/heppasoft/py-hot-reload/issues"
 
 [project.scripts]
 py-hot-reload = "py_hot_reload.__main__:main"
